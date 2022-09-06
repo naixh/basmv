@@ -1,0 +1,311 @@
+
+@font-face{
+    font-family: Roboto-Black;
+    src: url('../fonts/Roboto-Black.ttf');
+}
+@font-face{
+    font-family: Roboto-Regular;
+    src: url('../fonts/Roboto-Regular.ttf');
+}
+@font-face{
+    font-family: Roboto-Light;
+    src: url('../fonts/Roboto-Light.ttf');
+}
+body{
+    padding: 0;
+    margin: 0;
+    font-family: Roboto-Regular;
+    color: #3a3d72;
+}
+#topHeader{
+    width: 100%;
+    height: 40px;
+    background-color: #3a3d72;
+    color:white;
+}
+.container{
+    max-width:70%;
+    margin-left:15%;
+}
+#topHeader p {
+    margin: 0;
+    padding-top:10px;
+}
+.tc{
+    text-align: center;
+}
+.grid-2{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+.grid-4{
+    display:grid;grid-template-columns: 25% 25% 25% 25%;
+}
+.grid-item{
+    text-align: center;;
+}
+.nav-item{
+    list-style-type: none;
+    padding-top:25px;
+    font-weight:400;
+    font-size:14px;
+}
+.nav-item.active{
+    color: #ed5180;
+}
+a{
+    text-decoration: none;
+    color: inherit;
+}
+li{
+    list-style-type: none;
+}
+.mt-10{
+    margin-top:10px;
+}
+.card{
+    /* border:1px solid rgba(0,0,0,0.5); */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+    border-radius:25px;
+    margin: 0 15px 0 15px;
+    padding:40px 40px 40px 40px;
+    background-color: white;
+}
+.card-no-pad{
+    /* border:1px solid rgba(0,0,0,0.5); */
+    box-shadow: 0 0 10px rgba(0,0,0,0.3);
+    text-align: center;
+    border-radius:25px;
+    margin: 0 15px 0 15px;
+    background-color: white;
+}
+.mt-0{
+    margin-top:0px;
+}
+#contactForm input{
+    border:none;
+    border-radius:7px;
+    padding: 5px;
+    width: 100%;
+    margin-bottom:15px;
+    height:20px;
+}
+#contactForm button{
+    padding: 10px;
+    background-color: orange;
+    border-radius: 15px;
+    border: none;
+    color: white;
+    cursor: pointer;
+}
+.species p{
+    color: rgba(0,0,0,0.4);
+    font-size:13px;
+    line-height:20px;
+}
+.f-60 .flaticon-pin::before{font-size: 60px;}
+.f-60 .flaticon-phone::before{font-size: 60px;}
+.f-60 .flaticon-email::before{font-size: 60px;}
+
+.f-40 .flaticon-pin::before{font-size: 40px;}
+.f-40 .flaticon-phone::before{font-size: 40px;}
+.f-40 .flaticon-email::before{font-size: 40px;}
+
+.hero-container {
+    grid-template-columns: 45% 10% 45%;
+}
+
+.experts-container {
+    grid-template-columns: 25% 25% 25% 25%;
+}
+
+iframe {
+    max-width: 100%;
+    height: auto;
+    min-height: 250px;
+}
+
+.meet-professionals {
+    grid-template-columns: 20% 20% 60%;
+}
+
+.news-grid {
+    grid-template-columns: 33% 33% 33%;
+}
+
+.contact-grid {
+    grid-template-columns: 35% 30% 35%;
+}
+
+.on-hover-scale {
+    transition: all ease-in-out .25s;
+}
+
+.on-hover-scale:hover {
+    transform: scale(1.1);
+}
+
+.on-hover-grayscale img, .on-hover-grayscale-img, .on-hover-hero {
+    transition: filter ease-in-out .25s;
+}
+
+.on-hover-grayscale:hover img, .on-hover-grayscale-img:hover {
+    filter: grayscale(95%);
+}
+
+.on-hover-hero:hover {
+    filter: saturate(150%);
+}
+
+.on-hover-shine {
+    position: relative;
+    overflow: hidden;
+}
+.on-hover-shine::before {
+	position: absolute;
+	top: 0;
+	left: -75%;
+	z-index: 2;
+	display: block;
+	content: '';
+	width: 50%;
+	height: 100%;
+	background: linear-gradient(to right, rgba(255,255,255,0) 0%, rgba(255,255,255,.3) 100%);
+	transform: skewX(-25deg);
+}
+.on-hover-shine:hover::before {
+	animation: shine .75s;
+}
+@-webkit-keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+@keyframes shine {
+	100% {
+		left: 125%;
+	}
+}
+
+@media only screen and (max-width: 768px) {
+    #topHeader {
+        text-align: center;
+        height: auto;
+    }
+    #topHeader > .grid-2 {
+        text-align: center;
+        grid-template-columns: 100%;
+        height: auto !important;
+    }
+    #topHeader .grid-2 > p:last-of-type {
+        text-align: center !important;
+        padding-bottom: 10px;
+        padding-top: 5px;
+    }
+
+    #navBar {
+        margin-top: 20px;
+        margin-bottom: 20px !important;
+        height: auto !important;
+    }
+    #navBar > div {
+        grid-template-columns: 100% !important;
+        height: auto !important;
+        text-align: center;
+    }
+    #navBar > div > div:not(.navLogo) {
+        grid-template-columns: 100% !important;
+    }
+    #navBar .navItems {
+        padding: 0;
+        margin: 0;
+        height: auto !important;
+    }
+    .hero-container {
+        grid-template-columns: 100%;
+    }
+    .grid-4 {
+        grid-template-columns: 100%;
+    }
+    .grid-4 > .card:not(:last-of-type) {
+        margin-bottom: 15px;
+    }
+    .grid-4 > .card-no-pad:not(:last-of-type) {
+        margin-bottom: 15px;
+    }
+    footer > div {
+        grid-template-columns: 100% !important;
+    }
+    footer h3 {
+        margin-left: 0 !important;
+    }
+    .container {
+        max-width: 100%;
+        padding-left: 30px;
+        padding-right: 30px;
+        margin: 0;
+    }
+    .experts-container {
+        grid-template-columns: 100%;
+    }
+    .nutritional-philosophy {
+        grid-template-columns: 100% !important;
+        padding: 0 30px;
+    }
+    [class^="flaticon-"]:before {
+        margin-left: 0 !important;
+    }
+    .meet-professionals {
+        grid-template-columns: 100%;
+        text-align: center;
+    }
+    .meet-professionals .card {
+        position: relative !important;
+        width: inherit !important;
+        top: 0 !important;
+        left: 0 !important;
+        right: 0 !important;
+    }
+    .news-grid {
+        grid-template-columns: 100%;
+    }
+    .contact-grid {
+        grid-template-columns: 100%;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) and (max-width: 1024px) {
+    footer > div {
+        grid-template-columns: 100% !important;
+    }
+
+    .grid-4 {
+        grid-template-columns: 50% 50%;
+    }
+
+    .grid-4 > .card:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+
+    .grid-4 > .card-no-pad:not(:last-of-type) {
+        margin-bottom: 30px;
+    }
+    .contact-grid {
+        grid-template-columns: 100%;
+    }
+    img {
+        max-width: 100%;
+    }
+}
+
+@media only screen and (min-width: 768px) {
+    iframe {
+        min-height: 350px;
+    }
+}
+
+
