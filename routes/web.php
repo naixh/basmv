@@ -30,17 +30,21 @@ Route::get('/login', [AuthController::class, 'index'])->name('login');
 Route::post('/login', [AuthController::class, 'login']);
 Route::get('/logout', [AuthController::class, 'logout']);
 
+// View Routes
 Route::get('/rules', [ViewController::class, 'rules']);
 Route::get('/idioms', [ViewController::class, 'idioms']);
 Route::get('/linguists', [ViewController::class, 'linguists']);
 Route::get('/dhivehiNames', [ViewController::class, 'dhivehiNames']);
 Route::get('/dhivehiDates', [ViewController::class, 'dhivehiDates']);
 Route::get('/discussion', [ViewController::class, 'discussion']);
+// View Detailed Discussion
 Route::get('/discussionDetail/{discussion}', [ViewController::class, 'discussionDetail']);
 
+// Create or Delete Discussions
 Route::get('/discussion/create', [DiscussionController::class, 'create']);
 Route::get('/discussion/delete', [DiscussionController::class, 'delete']);
 
+// Create or Delete Discussion Comments
 Route::get('/discussion/comment', [CommentController::class, 'comment']);
 Route::get('/discussion/deleteComment', [CommentController::class, 'delete']);
 
