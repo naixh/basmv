@@ -5,7 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Models\Rule;
 use App\Models\Idiom;
-// use App\Models\Linguist;
+use App\Models\Discussion;
 use App\Models\DhivehiName;
 use App\Models\History;
 use App\Models\User;
@@ -35,5 +35,10 @@ class ViewController extends Controller
     public function dhivehiDates(){
         $data = History::orderBy('created_at','desc')->get();
         return view('histories', compact('data'));
+    }
+
+    public function discussion(){
+        $data = Discussion::with('creator','comments')->get();
+        return view('discussion', compact('data'));
     }
 }

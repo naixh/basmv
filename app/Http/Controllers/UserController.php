@@ -77,8 +77,7 @@ class UserController extends Controller
         if(! $data){
             return response()->json(['Status'=>'error', 'Message'=>'User Not Found']);
         }
-        $status = $data->delete();
-        if($status){
+        if($data->delete()){
             return response()->json(['Status'=>'success', 'Message'=>'User Deleted Successfully']);
         }
         return response()->json(['Status'=>'error', 'Message'=>'User Deletion Failed']);

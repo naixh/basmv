@@ -76,8 +76,7 @@ class RuleController extends Controller
         if(! $data){
             return response()->json(['Status'=>'error', 'Message'=>'Rule Not Found']);
         }
-        $status = $data->delete();
-        if($status){
+        if($data->delete()){
             return response()->json(['Status'=>'success', 'Message'=>'Rule Deleted Successfully']);
         }
         return response()->json(['Status'=>'error', 'Message'=>'Rule Deletion Failed']);

@@ -81,8 +81,7 @@ class HistoryController extends Controller
         if(! $data){
             return response()->json(['Status'=>'error', 'Message'=>'History Not Found']);
         }
-        $status = $data->delete();
-        if($status){
+        if($data->delete()){
             return response()->json(['Status'=>'success', 'Message'=>'History Deleted Successfully']);
         }
         return response()->json(['Status'=>'error', 'Message'=>'History Deletion Failed']);

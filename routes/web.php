@@ -33,6 +33,7 @@ Route::get('/idioms', [ViewController::class, 'idioms']);
 Route::get('/linguists', [ViewController::class, 'linguists']);
 Route::get('/dhivehiNames', [ViewController::class, 'dhivehiNames']);
 Route::get('/dhivehiDates', [ViewController::class, 'dhivehiDates']);
+Route::get('/discussion', [ViewController::class, 'discussion']);
 
 // Routes for Rule Controller
 Route::prefix('/admin/rules')->group(function(){

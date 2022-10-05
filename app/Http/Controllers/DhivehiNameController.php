@@ -78,8 +78,7 @@ class DhivehiNameController extends Controller
         if(! $data){
             return response()->json(['Status'=>'error', 'Message'=>'Name Not Found']);
         }
-        $status = $data->delete();
-        if($status){
+        if($data->delete()){
             return response()->json(['Status'=>'success', 'Message'=>'Name Deleted Successfully']);
         }
         return response()->json(['Status'=>'error', 'Message'=>'Name Deletion Failed']);

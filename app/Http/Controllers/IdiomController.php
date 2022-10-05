@@ -64,8 +64,7 @@ class IdiomController extends Controller
         if(! $data){
             return response()->json(['Status'=>'error', 'Message'=>'Idiom Not Found']);
         }
-        $status = $data->delete();
-        if($status){
+        if($data->delete()){
             return response()->json(['Status'=>'success', 'Message'=>'Idiom Deleted Successfully']);
         }
         return response()->json(['Status'=>'error', 'Message'=>'Idiom Deletion Failed']);
