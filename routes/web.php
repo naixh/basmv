@@ -8,6 +8,8 @@ use App\Http\Controllers\IdiomController;
 use App\Http\Controllers\DhivehiNameController;
 use App\Http\Controllers\HistoryController;
 use App\Http\Controllers\UserController;
+use App\Http\Controllers\DiscussionController;
+use App\Http\Controllers\CommentController;
 
 /*
 |--------------------------------------------------------------------------
@@ -34,6 +36,13 @@ Route::get('/linguists', [ViewController::class, 'linguists']);
 Route::get('/dhivehiNames', [ViewController::class, 'dhivehiNames']);
 Route::get('/dhivehiDates', [ViewController::class, 'dhivehiDates']);
 Route::get('/discussion', [ViewController::class, 'discussion']);
+Route::get('/discussionDetail/{discussion}', [ViewController::class, 'discussionDetail']);
+
+Route::get('/discussion/create', [DiscussionController::class, 'create']);
+Route::get('/discussion/delete', [DiscussionController::class, 'delete']);
+
+Route::get('/discussion/comment', [CommentController::class, 'comment']);
+Route::get('/discussion/deleteComment', [CommentController::class, 'delete']);
 
 // Routes for Rule Controller
 Route::prefix('/admin/rules')->group(function(){

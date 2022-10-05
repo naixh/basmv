@@ -12,21 +12,6 @@ class DiscussionController extends Controller
         $this->middleware('auth');
     }
 
-    public function index()
-    {
-        $data = Discussion::with('comments','lastComment')->get();
-        return view('admin.discussion', compact('data'));
-    }
-
-    public function find()
-    {
-        $validated = request()->validate([
-            'id'            => 'required|integer',
-        ]);
-        $data = Discussion::with('comments','lastComment')->whereId($validated['id'])->get();
-        return response()->json($data);
-    }
-
     public function create()
     {
         $validated = request()->validate([

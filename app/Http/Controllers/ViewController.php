@@ -38,7 +38,14 @@ class ViewController extends Controller
     }
 
     public function discussion(){
-        $data = Discussion::with('creator','comments')->get();
+        $data = Discussion::with('comments','lastComment')->get();
         return view('discussion', compact('data'));
+    }
+
+    public function discussionDetail(Discussion $discussion)
+    {
+        $discussion->load('comments','lastComment');
+        $data = $discussion;
+        return view('discussionDetail', compact('data'));
     }
 }
